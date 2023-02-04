@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body { background: url(./images/pattern-background-desktop.svg) no-repeat; background-size: 100% 45%; background-color:  hsl(225, 100%, 94%); height: 100vh; display: flex; justify-content: center; align-items: center;}
+    #container {cursor:pointer; padding-bottom: 20px; text-align: center; background: white; border-radius: 20px;  margin: auto; border: 1px solid black; width: 380300pxpx; height: auto;}
+    .img { width: inherit; height: 200px; border-radius: 20px 20px 0 0 ;}
+    .flex { display: flex; justify-content: center; align-items: center; background-color: aliceblue; width: 300px; height: 75px; border-radius: 10px; margin: auto; gap: 5px;}
+    span { margin-left: 70px; color: hsl(245, 75%, 52%); text-decoration: underline; font-weight: bold;}
+    .strong {font-weight: bolder; color: black; font-size: 15px; margin-bottom: -5px;}
+    button {cursor:pointer; background-color: blue; color: white; width: 300px; margin: 20px auto 20px auto; display: flex; justify-content: center; align-items: center; height: 40px; border-radius: 10px; border: none;}
+    p {color:hsl(224, 23%, 55%); font-size: 13px;}
+    .attribution {left: 40%; font-size: 11px; text-align: center; position: absolute; bottom: 0;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="container">
+      <img class="img" v-bind:src="image" v-bind:alt="description">
+      <h1>{{levelOneHead}}</h1>
+      <p>{{para1}}</p>
+      <p>{{para2}}</p>
+      <p>{{para3}}</p>
+      <div class="flex">
+        <img v-bind:src="icon" v-bind:alt="description">
+          <div class="block">
+          <p class="strong">{{para4}}</p>
+          <p>{{para5}}</p>
+        </div>
+        <span>{{para6}}</span>
+      </div>
+      <button>Proceed to Payment</button>
+      <p style="font-weight: bold;">{{para7}}</p>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">kareem khaled</a>.
+  </main>
+<script src="main.js"></script>
+<script>
+  const mountedApp = app.mount('#container');
+</script>
+  </div>
+</body>
+</html>
